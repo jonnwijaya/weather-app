@@ -28,7 +28,7 @@ function getWeather(weatherApi) {
             document.getElementById("temperature").textContent = data.main.temp;
             document.getElementById("wind").textContent = data.wind.speed;
             document.getElementById("humidity").textContent = data.main.humidity;
-            //document.getElementById("uv-index").textContent = data.
+            //document.getElementById("uv-index").textContent = data. (Can't get the uv index)
         })
 }
 
@@ -40,5 +40,30 @@ function getForecast(forecastApi) {
         })
         .then(function (forecastData) {
             console.log(forecastData);
+
+            //Day 1
+            document.getElementById("temperature-1").textContent = forecastData.list[0].main.temp;
+            document.getElementById("wind-1").textContent = forecastData.list[0].wind.speed;
+            document.getElementById("humidity-1").textContent = forecastData.list[0].main.humidity;
+
+            //Day 2
+            document.getElementById("temperature-2").textContent = forecastData.list[8].main.temp;
+            document.getElementById("wind-2").textContent = forecastData.list[8].wind.speed;
+            document.getElementById("humidity-2").textContent = forecastData.list[8].main.humidity;
+
+            //Day 3
+            document.getElementById("temperature-3").textContent = forecastData.list[16].main.temp;
+            document.getElementById("wind-3").textContent = forecastData.list[16].wind.speed;
+            document.getElementById("humidity-3").textContent = forecastData.list[16].main.humidity;
+
+            //Day 4
+            document.getElementById("temperature-4").textContent = forecastData.list[24].main.temp;
+            document.getElementById("wind-4").textContent = forecastData.list[24].wind.speed;
+            document.getElementById("humidity-4").textContent = forecastData.list[24].main.humidity;
+
+            //Day 5
+            document.getElementById("temperature-5").textContent = forecastData.list[32].main.temp;
+            document.getElementById("wind-5").textContent = forecastData.list[32].wind.speed;
+            document.getElementById("humidity-5").textContent = forecastData.list[32].main.humidity;
         })
 }
